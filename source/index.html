@@ -4,10 +4,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
+  <title>Afrianska</title>
+  <meta name="description" content="Пробное задание" />
+  <link rel="preload" href="fonts/Galien-Bold.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Galien-Bold.woff" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Gilroy-Light.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Gilroy-Light.woff" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Gilroy-Regular.woff" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Gilroy-Semibold.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Gilroy-Semibold.woff" as="font" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class='header'>
+    <a href="#" onclick="return false;" target="_blank">
+      <span class='visually-hidden'>Логотип Afrianska</span>
+    </a>
+    <button>Открыть меню</button>
+  </header>
+  <main>
+    <section class='greeting'>
+      <h1>New Automation Tool for Your Home</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique
+        vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.</p>
+      <a>See Our Project</a>
+    </section>
+    <section class='about'>
+      <h2>What we do to help our client grow in digital era,</h2>
+      <div class='about__home'>
+        <h3>Bring Technology To Your Comfrotable Home</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.</p>
+        <a>Learn more</a>
+      </div>
+      <div class='about__business'>
+        <h3>Make Your business To Be Better Famous In Internet</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. </p>
+        <a>Learn more</a>
+      </div>
+      <div class='about__suit'>
+        <h3>Build Your Digital Product That Suitable For Your Need</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.</p>
+        <a>Learn more</a>
+      </div>
+    </section>
+    <section class='clients'>
+      <h2>Our Beloved Client</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      <div class='clients__list'>
+        <div class='clients__item'>
+          <a>LOGO CLIENT 1</a>
+        </div>
+        <div class='clients__item'>
+          <a>LOGO CLIENT 1</a>
+        </div>
+        <div class='clients__item'>
+          <a>LOGO CLIENT 1</a>
+        </div>
+        <div class='clients__item'>
+          <a>LOGO CLIENT 1</a>
+        </div>
+        <div class='clients__item'>
+          <a>LOGO CLIENT 1</a>
+        </div>
+        <div class='clients__item'>
+          <a>LOGO CLIENT 1</a>
+        </div>
+        <div class='clients__item'>
+          <a>LOGO CLIENT 1</a>
+        </div>
+        <div class='clients__item'>
+          <a>More Client</a>
+        </div>
+      </div>
+    </section>
+    <section class='work'>
+      <h2>Intersted to woek with our team?</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      <button>Let’s Talk</button>
+    </section>
+  </main>
+  <footer class='footer'>
+    <div class='footer__col1'>
+      <a href="#" onclick="return false;" target="_blank">
+        <span class='visually-hidden'>Логотип Afrianska</span>
+      </a>
+      <p class='footer__address'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <a href='+6281273134321'>+62-812-7313-4321</a>
+      <a href='mailto:hello.afrian@gmail.com' target="_blank">hello.afrian@gmail.com</a>
+    </div>
+  </footer>
+  <section class="message">
+    <div class="message__wrapper">
+      <div class="message__about">
+        <h2>SEND US MESSAGE</h2>
+        <form class="form message__form" action="http://echo.htmlacademy.ru" method="post">
+          <label class="form__label">Full Name
+            <input class="form__input" id="name" type="text" name="name" placeholder="Your Name" required>
+          </label>
+          <label class="form__label">Email
+            <input class="form__input" id="email" type="email" name="email" placeholder="Your Email" required>
+          </label>
+          <label class="form__label">Message
+            <textarea class="form__textarea" name="text" placeholder="Your Message"></textarea>
+          </label>
+          <button class="form__button button" type="submit" name="button">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
