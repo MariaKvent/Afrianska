@@ -1,11 +1,21 @@
-$mobile-width: 320px;
-$tablet-width: 768px;
-$desktop-width: 1204px;
-$desktop-wide-width: 1920px;
-
+// ретина
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
+// адаптив
+$desktop-max: 1920px;
+$desktop-medium: 1440px;
+$desktop: 1280px;
+$tablet-big: 1020px;
+$tablet: 768px;
+$mobile-medium: 440px;
+$mobile: 320px;
+$content: 940px;
+
+$medium-desktop-padding: 60px;
+$tablet-padding: 40px;
+$mobile-padding: 30px;
+$mobile-medium-padding: 20px;
 
 // Шрифты
 $font: "Gilroy", "Arial", sans-serif;

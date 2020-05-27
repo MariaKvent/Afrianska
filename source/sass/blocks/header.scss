@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  padding: 8px 10px;
+  margin: 0 auto;
+  width: 1200px;
+  position: absolute;
+  z-index: 2;
+  background-color: transparent;
+  left: 50%;
+  transform: translateX(-50%);
+
+  button {
+    @include button-reset;
+  }
+
+  .header__logo {
+    @include link-reset;
+  }
+}

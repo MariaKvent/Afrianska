@@ -93,6 +93,8 @@
   line-height: 74px;
   font-weight: 700;
   letter-spacing: 0.04em;
+  margin: 0;
+  padding: 0;
 
   // @include medium-desktop {
   //   font-size: 75px;
@@ -119,6 +121,8 @@
   font-size: 36px;
   line-height: 46px;
   letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0;
 
   // @include medium-desktop {
   //   font-size: 30px;
@@ -145,6 +149,8 @@
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0;
 
   // @include medium-desktop {
   //   font-size: 30px;
@@ -171,6 +177,8 @@
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0;
 }
 
 // @mixin text-small {
@@ -214,7 +222,7 @@
   margin-right: auto;
 
   @include medium-desktop {
-    max-width: 1280px;
+    max-width: 940px;
     padding-right: $medium-desktop-padding;
     padding-left: $medium-desktop-padding;
   }
@@ -233,4 +241,8 @@
     padding-right: $mobile-medium-padding;
     padding-left: $mobile-medium-padding;
   }
+}
+
+@mixin outline {
+  outline: 1px solid red;
 }
