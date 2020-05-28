@@ -14,8 +14,6 @@
     align-items: flex-end;
   }
 
-
-
   .about__item {
     box-shadow: 5px 20px 50px #1070b133;
     border-radius: 10px;
@@ -45,7 +43,6 @@
     }
 
     &::before {
-
       top: 40px;
     }
     &--home {
@@ -118,6 +115,4 @@
 
     }
   }
-
-
 }
