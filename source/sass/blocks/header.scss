@@ -11,12 +11,16 @@
   background-color: transparent;
   left: 50%;
   transform: translateX(-50%);
+  box-sizing: border-box;
+  overflow: visible;
 
   button {
     @include button-reset;
+    margin-right: 5px;
   }
 
   .header__logo {
     @include link-reset;
+    overflow: visible;
   }
 }

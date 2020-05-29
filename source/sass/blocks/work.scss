@@ -1,38 +1,25 @@
 .work {
-  padding-top: 91px;
+  padding-top: 88px;
   position: relative;
   z-index: 1;
+  margin-top: 1px;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 93%;
     height: 100%;
     z-index: -1;
     background: $color-blue;
     border-radius: 0px 200px 0px 0px;
   }
 
-  // &::after {
-  //   @include container;
-  //   content: "";
-  //   position: absolute;
-  //   bottom: -2px;
-  //   left: 0;
-  //   width: 90%;
-  //   height: 1px;
-  //   z-index: -1;
-  //   background: red;
-  // }
-
   span {
-    @include container;
-    // position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 78.5%;
     height: 1px;
     z-index: -1;
     background: $color-white;
@@ -43,20 +30,8 @@
 
   .work__content {
     @include container;
-    // margin-right: 0;
     display: flex;
-    padding-bottom: 96px;
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   bottom: -2px;
-    //   left: 0;
-    //   width: 69%;
-    //   height: 1px;
-    //   z-index: -1;
-    //   background: red;
-    // }
+    padding-bottom: 98px;
   }
 
   .work__text {
@@ -66,13 +41,14 @@
       @include h2;
       color: $color-white;
       width: 70%;
-      margin-bottom: 32px;
+      margin-bottom: 35px;
     }
 
     p {
       @include p;
       color: $color-white;
       opacity: 0.6;
+      width: 80%;
     }
   }
 
@@ -81,6 +57,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding-top: 6px;
 
     button {
       @include button-reset;

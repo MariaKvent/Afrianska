@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <div style="display:none">
+  <div class='visually-hidden'>
     <include src="build/img/sprite_auto.svg"></include>
   </div>
   <header class='header'>
@@ -37,40 +37,57 @@
   <main>
     <section class='greeting'>
       <div class='greeting__content'>
-        <h1>New automation tool for your home</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique
-          vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.</p>
-        <a class='button' href="#" onclick="return false;" target="_blank">See Our Project</a>
+        <div class='greeting__text'>
+          <h1>New Automation Tool for Your Home</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique
+            vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.</p>
+          <a class='button' href="#" onclick="return false;" target="_blank">See Our Project</a>
+        </div>
+        <svg width="688" height="624">
+          <use xlink:href="#img-main"></use>
+        </svg>
       </div>
     </section>
     <section class='about'>
       <h2>What we do to help our client grow in digital era,</h2>
       <div class='about__list'>
         <div class='about__item about__item--home'>
+          <svg width="255" height="208">
+            <use xlink:href="#img-home"></use>
+          </svg>
           <h3>Bring technology to your comfrotable home</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" onclick="return false;" target="_blank">Learn more
+          <a class='about__link' href="#" onclick="return false;" target="_blank">
+            <span>Learn more</span>
             <svg width="16" height="16">
               <use xlink:href="#img-arrow"></use>
             </svg>
           </a>
         </div>
         <div class='about__item about__item--business'>
+          <svg width="192" height="132">
+            <use xlink:href="#img-business"></use>
+          </svg>
           <h3>Make your business to be better famous in internet</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. </p>
-          <a href="#" onclick="return false;" target="_blank">Learn more
+            incididunt ut labore et dolore magna aliqua.</p>
+          <a class='about__link' href="#" onclick="return false;" target="_blank">
+            <span>Learn more</span>
             <svg width="16" height="16">
               <use xlink:href="#img-arrow"></use>
             </svg>
           </a>
         </div>
         <div class='about__item about__item--suit'>
+          <svg width="171" height="132">
+            <use xlink:href="#img-suit"></use>
+          </svg>
           <h3>Build your digital product that suitable for your need</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" onclick="return false;" target="_blank">Learn more
+          <a class='about__link' href="#" onclick="return false;" target="_blank">
+            <span>Learn more</span>
             <svg width="16" height="16">
               <use xlink:href="#img-arrow"></use>
             </svg>
@@ -81,8 +98,10 @@
     <section class='clients'>
       <div class='clients__content'>
         <h2>Our beloved client</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        <div class="clients__p">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
         <div class='clients__list'>
           <a class='clients__item' href="#" onclick="return false;" target="_blank">
             Logo Client 1
@@ -189,7 +208,7 @@
   <section class="message">
     <div class="message__wrapper">
       <div class="message__about">
-        <h2>SEND US MESSAGE</h2>
+        <h3>SEND US MESSAGE</h3>
         <form class="form message__form" action="http://echo.htmlacademy.ru" method="post">
           <label class="form__label">Full Name
             <input class="form__input" id="name" type="text" name="name" placeholder="Your Name" required>
@@ -200,9 +219,13 @@
           <label class="form__label">Message
             <textarea class="form__textarea" name="text" placeholder="Your Message"></textarea>
           </label>
-          <button class="form__button button" type="submit" name="button">SUBMIT</button>
+          <button class="form__button button" type="submit" name="button">Submit</button>
         </form>
       </div>
+    </div>
+    <div class="message__success">
+      <p>Thank you for your message!</p>
+      <button type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </div>
   </section>
 </body>

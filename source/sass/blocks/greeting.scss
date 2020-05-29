@@ -2,7 +2,8 @@
   position: relative;
   z-index: 1;
   top: -12px;
-  min-height: 768px;
+  min-height: 780px;
+  overflow-x: hidden;
 
   &::before {
     content: "";
@@ -20,31 +21,26 @@
     @include container;
     position: relative;
     z-index: 1;
+    display: flex;
 
-    &::before {
-      content: "";
+
+    svg {
       position: absolute;
-      background: url('../img/img-main@1x.png') no-repeat;
-      background-size: contain;
-      right: -10%;
-      top: 20%;
-      width: 687px;
-      height: 612px;
-      z-index: -1;
+      right: -12.2%;
+      top: 13%;
     }
 
     h1 {
       @include h1;
-      padding-top: 189px;
-      text-transform: capitalize;
+      padding-top: 191px;
       width: 60%;
-      margin-bottom: 32px;
+      margin-bottom: 40px;
     }
 
     p {
       @include p;
       opacity: 0.6;
-      margin-bottom: 71px;
+      margin-bottom: 76px;
       width: 45%;
     }
 
@@ -58,12 +54,13 @@
       line-height: 26px;
       text-align: center;
       letter-spacing: 0.04em;
-      padding: 15px 48px;
+      padding: 15px 30px;
       display: flex;
+      justify-content: center;
       width: 220px;
       min-height: 56px;
       box-sizing: border-box;
-      margin-bottom: 20px;
+      margin-bottom: 191px;
     }
   }
 }

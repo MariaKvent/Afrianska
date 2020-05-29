@@ -221,11 +221,11 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include medium-desktop {
-    max-width: 940px;
-    padding-right: $medium-desktop-padding;
-    padding-left: $medium-desktop-padding;
-  }
+  // @include medium-desktop {
+  //   max-width: 940px;
+  //   padding-right: $medium-desktop-padding;
+  //   padding-left: $medium-desktop-padding;
+  // }
 
   @include tablet {
     padding-right: $tablet-padding;
