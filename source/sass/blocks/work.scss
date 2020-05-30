@@ -14,6 +14,18 @@
     z-index: -1;
     background: $color-blue;
     border-radius: 0px 200px 0px 0px;
+
+    @include tablet {
+      width: 96%;
+    }
+
+    @include tablet-small {
+      border-radius: 0px 150px 0px 0px;
+    }
+
+    @include mobile {
+      width: calc(100% - $mobile-padding);
+    }
   }
 
   span {
@@ -26,22 +38,46 @@
     display: block;
     margin-left: 0;
     opacity: 0.4;
+
+    @include tablet-small {
+      width: 87%;
+    }
+
+    @include mobile {
+      width: 96%;
+    }
   }
 
   .work__content {
     @include container;
     display: flex;
     padding-bottom: 98px;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   .work__text {
     width: 60%;
+
+    @include tablet-small {
+      width: 50%;
+    }
+
+    @include mobile {
+      width: 80%;
+    }
 
     h2 {
       @include h2;
       color: $color-white;
       width: 70%;
       margin-bottom: 35px;
+
+      @include tablet-small {
+        width: 80%;
+      }
     }
 
     p {
@@ -49,6 +85,15 @@
       color: $color-white;
       opacity: 0.6;
       width: 80%;
+
+      @include tablet-small {
+        width: 90%;
+      }
+
+      @include mobile {
+        width: 100%;
+        margin-bottom: 75px;
+      }
     }
   }
 
@@ -58,6 +103,10 @@
     align-items: center;
     margin: 0 auto;
     padding-top: 6px;
+
+    @include mobile {
+      width: 100%;
+    }
 
     button {
       @include button-reset;
@@ -72,6 +121,10 @@
       min-height: 56px;
       color: $color-white;
       letter-spacing: 0.04em;
+
+      @include mobile {
+        width: 80%;
+      }
     }
   }
 }

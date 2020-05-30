@@ -13,6 +13,14 @@
     height: 100%;
     z-index: -1;
     background: $color-blue;
+
+    @include tablet {
+      width: 96%;
+    }
+
+    @include mobile {
+      width: calc(100% - $mobile-padding);
+    }
   }
 
   &::after {
@@ -26,24 +34,38 @@
     background: $color-button;
   }
 
-
-
   .footer__content {
     @include container;
     display: flex;
     flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   a {
     @include link-reset;
     color: $color-white;
-    width: 60%;
+    width: 80%;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   .footer__col1 {
     width: 400px;
     color: $color-white;
     letter-spacing: 0.05em;
+
+    @include tablet-small {
+      width: 40%;
+    }
+
+    @include mobile {
+      width: 80%;
+    }
 
     .footer__logo {
       display: flex;
@@ -66,20 +88,8 @@
       a {
         @include link-reset;
         color: $color-white;
-
-        width: 60%;
+        width: 80%;
       }
-    }
-
-    p {
-      @include p;
-
-      width: 60%;
-    }
-
-    span {
-      width: 36px;
-      font-weight: 600;
     }
 
     .footer__item {
@@ -87,11 +97,22 @@
       align-items: baseline;
       margin-bottom: 23px;
 
+      p {
+        @include p;
+
+        width: 80%;
+      }
+
+      span {
+        width: 36px;
+        font-weight: 600;
+      }
+
       a {
         @include link-reset;
         color: $color-white;
         margin-bottom: 8px;
-        width: 60%;
+        width: 80%;
       }
     }
   }
@@ -101,10 +122,24 @@
     width: 220px;
     padding-right: 20px;
 
+    @include tablet-small {
+      width: 27%;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-top: 40px;
+      padding-right: 0;
+    }
+
     h3 {
       @include h3;
       color: $color-white;
       margin-bottom: 32px;
+
+      @include mobile {
+        margin-bottom: 25px;
+      }
     }
 
     ul {
@@ -133,5 +168,14 @@
     padding-top: 37px;
     color: $color-white;
     opacity: 0.4;
+
+    @include mobile {
+      padding-top: 50px;
+      width: 80%;
+    }
+
+    @include mobile-medium {
+      font-size: 15px;
+    }
   }
 }

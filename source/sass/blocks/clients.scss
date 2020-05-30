@@ -3,6 +3,14 @@
   border-radius: 200px 0px 0px 0px;
   padding-bottom: 127px;
 
+  @include tablet-small {
+    border-radius: 150px 0px 0px 0px;
+  }
+
+  @include mobile {
+    padding-bottom: 100px;
+  }
+
   .clients__content {
     @include container;
     display: flex;
@@ -16,11 +24,34 @@
       display: inline-block;
       margin-right: 85px;
       text-transform: capitalize;
+
+      @include tablet-small {
+        width: 32%;
+        margin-left: 30px;
+        margin-right: 70px;
+      }
+
+      @include mobile {
+        width: 80%;
+        margin: 0 0 20px;
+      }
+
+      @include mobile-medium {
+        width: 100%;
+      }
     }
 
     .clients__p {
       width: 55%;
       margin-top: 2px;
+
+      @include tablet-small {
+        width: 50%;
+      }
+
+      @include mobile {
+        width: 80%;
+      }
     }
 
     p {
@@ -35,13 +66,21 @@
       flex-wrap: wrap;
       position: relative;
       max-width: 960px;
-      margin:  auto;
+      margin: auto;
       overflow: hidden;
+
+      @include mobile {
+        padding-top: 75px;
+      }
+
+      @include mobile-medium {
+        padding-top: 50px;
+      }
     }
 
     .clients__item {
       @include link-reset;
-      width: 235px;
+      width: 25%;
       min-height: 127px;
       box-sizing: border-box;
       position: relative;
@@ -53,6 +92,23 @@
       font-size: 20px;
       line-height: 46px;
       letter-spacing: 0.02em;
+
+      @include tablet-small {
+        font-size: 18px;
+        min-height: 110px;
+      }
+
+      @include mobile {
+        width: 50%;
+        min-height: 127px;
+        font-size: 20px;
+      }
+
+      @include mobile-medium {
+        width: 50%;
+        min-height: 127px;
+        font-size: 16px;
+      }
 
       &::before {
         content: '';

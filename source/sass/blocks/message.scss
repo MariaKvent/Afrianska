@@ -14,7 +14,7 @@
 
   .message__wrapper {
     width: 540px;
-    min-height: 800px;
+    min-height: 80vh;
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
     background: $color-white;
@@ -23,8 +23,25 @@
     top: 0;
     left: 50%;
     transform: scale(1) translate(-50%, 0);
-    padding: 56px;
+    padding: 5.6vh;
     box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // @media (max-height: 1000px) {
+    //   height: 600px;
+    // }
+
+    // // @media (max-height: 809px) {
+    // //   height: 80vh;
+    // // }
+
+    @include mobile {
+      width: 70vw;
+      padding: 3vh;
+    }
 
 
     .message__success--show {
@@ -33,8 +50,12 @@
 
     h3 {
       @include h3;
-      margin-bottom: 54px;
+      margin-bottom: 5.4vh;
       letter-spacing: 0.04em;
+
+      @include mobile {
+        font-size: 20px;
+      }
     }
 
     form {
@@ -44,21 +65,29 @@
       label {
         display: flex;
         flex-direction: column;
-        margin-bottom: 37px;
+        margin-bottom: 3.7vh;
         letter-spacing: 0.04em;
+
+        // @include mobile {
+        //   margin-bottom: 20px;
+        // }
       }
 
       input,
       textarea {
         @include field-reset;
-        margin-top: 17px;
+        margin-top: 1.7vh;
         box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
         opacity: 0.4;
         border: 1px solid #356EAD;
         box-sizing: border-box;
         border-radius: 10px;
-        padding: 25px 42px;
+        padding: 2.5vh 4.2vh;
         resize: none;
+
+        // @include mobile {
+        //   padding: 15px 30px;
+        // }
 
         &::placeholder {
           font-weight: 300;
@@ -69,8 +98,12 @@
       }
 
       textarea {
-        height: 144px;
+        height: 14.4vh;
         resize: none;
+
+        // @include mobile {
+        //   height: 100px;
+        // }
       }
 
       button {
@@ -78,7 +111,7 @@
         background: $color-button;
         box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
         border-radius: 10px;
-        padding: 23px 30px;
+        padding: 2.3vh 3vh;
         text-align: center;
         color: $color-white;
         text-transform: uppercase;
@@ -86,7 +119,11 @@
         line-height: 26px;
         font-weight: 600;
         letter-spacing: 0.04em;
-        margin-top: 33px;
+        margin-top: 3.3vh;
+
+        @include mobile {
+          padding: 1.5vh 3vh;
+        }
       }
     }
   }
@@ -97,7 +134,7 @@
     top: 50%;
     left: 50%;
     transform: scale(0) translate(-50%, -50%);
-    padding: 34px 30px;
+    padding: 3.44vh 3vh;
     background-color: $color-white;
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
@@ -115,12 +152,12 @@
     button {
       @include button-reset;
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 1vh;
+      right: 1vh;
 
       min-width: auto;
-      width: 13px;
-      height: 13px;
+      width: 1.3vh;
+      height: 1.3vh;
 
       &::after,
       &::before {

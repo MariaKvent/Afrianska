@@ -4,7 +4,6 @@
   position: relative;
   top: 40px;
   padding: 8px 10px;
-  margin: 0 auto;
   width: 1200px;
   position: absolute;
   z-index: 2;
@@ -13,6 +12,25 @@
   transform: translateX(-50%);
   box-sizing: border-box;
   overflow: visible;
+
+  @include tablet {
+    // @include container;
+    width: 100%;
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+
+  @include mobile {
+    top: 20px;
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+
+  @include mobile-medium {
+    padding-left: $mobile-medium-padding;
+    padding-right: $mobile-medium-padding;
+  }
+
 
   button {
     @include button-reset;
