@@ -10,11 +10,11 @@
   background-color: transparent;
   left: 50%;
   transform: translateX(-50%);
-  box-sizing: border-box;
   overflow: visible;
 
   @include tablet {
     // @include container;
+    box-sizing: border-box;
     width: 100%;
     padding-left: $mobile-padding;
     padding-right: $mobile-padding;
