@@ -26,9 +26,6 @@
     padding: 5.6vh;
     box-sizing: border-box;
     overflow: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     display: block;
 
     @include mobile {
@@ -69,7 +66,7 @@
         margin-top: 1.7vh;
         box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
         opacity: 0.4;
-        border: 1px solid #356EAD;
+        border: 1px solid #356ead;
         box-sizing: border-box;
         border-radius: 10px;
         padding: 2.5vh 4.2vh;
@@ -191,6 +188,3 @@
   line-height: 18px;
   display: none;
 }
-
-
-

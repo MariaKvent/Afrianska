@@ -13,14 +13,14 @@
     height: 100%;
     z-index: -1;
     background: $color-blue;
-    border-radius: 0px 200px 0px 0px;
+    border-radius: 0 200px 0 0;
 
     @include tablet {
       width: 96%;
     }
 
     @include tablet-small {
-      border-radius: 0px 150px 0px 0px;
+      border-radius: 0 150px 0 0;
     }
 
     @include mobile {
