@@ -42,6 +42,7 @@ gulp.task("server", function () {
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
+  gulp.watch("source/*.php", gulp.series("php", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -75,12 +76,14 @@ gulp.task("webp", function () {
 gulp.task("sprite", function () {
   return gulp.src('source/img/img-*.svg')
   .pipe(svgSprite({
-      mode: {
-        view: {
-          bust: false,
-        },
-        symbol: true
-      }
+    mode: {
+      inline: true, // Prepare for inline embedding
+      css: true, // Create a «css» sprite
+        view: true, // Create a «view» sprite
+        defs: true, // Create a «defs» sprite
+        symbol: true, // Create a «symbol» sprite
+        stack: true // Create a «stack» sprite
+  }
     }
   ))
   .pipe(rename("sprite_auto.svg"))
@@ -100,12 +103,18 @@ gulp.task("js", function () {
     .pipe(gulp.dest("build/js"));
 });
 
+gulp.task("php", function () {
+  return gulp.src("source/js/*.php")
+    .pipe(gulp.dest("build/js/"));
+});
+
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source//*.ico"
+    "source//*.ico",
+    "source/*.php"
     ], {
       base: "source"
     })

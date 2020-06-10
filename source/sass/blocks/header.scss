@@ -13,7 +13,6 @@
   overflow: visible;
 
   @include tablet {
-    // @include container;
     box-sizing: border-box;
     width: 100%;
     padding-left: $mobile-padding;

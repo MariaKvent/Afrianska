@@ -22,7 +22,12 @@
   }
 
   @include mobile {
+    min-height: auto;
     top: 0;
+  }
+
+  @include mobile-medium {
+    min-height: 100vh;
   }
 
   .greeting__content {
@@ -30,11 +35,6 @@
     position: relative;
     z-index: 1;
     display: flex;
-
-    // @include tablet-small {
-    //   flex-direction: column;
-    //   margin: 0;
-    // }
 
     svg {
       position: absolute;
@@ -48,8 +48,6 @@
       }
 
       @include tablet-small {
-        // order: 0;
-        // position: relative;
         width: 50%;
         height: auto;
         right: 0;
@@ -60,10 +58,6 @@
         display: none;
       }
     }
-
-    // .greeting__text {
-    //   order: 1;
-    // }
 
     h1 {
       @include h1;
@@ -86,7 +80,6 @@
       @include mobile {
         padding-top: 130px;
         width: 80%;
-        // text-align: center;
       }
 
       @include mobile-medium {

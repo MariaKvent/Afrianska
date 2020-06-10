@@ -56,6 +56,7 @@
 }
 
 @mixin link-reset {
+  @include transition(opacity);
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -72,6 +73,7 @@
 }
 
 @mixin button-reset {
+  @include transition(opacity);
   padding: 0;
   background: none;
   border: none;

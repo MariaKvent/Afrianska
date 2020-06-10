@@ -6,10 +6,10 @@
   position: fixed;
   top: 0;
   z-index: 3;
-  transform: scale(0);
+  display: none;
 
-  .message--show {
-    transform: scale(0) translate(-50%, -50%);
+  @media (max-height: 400px) {
+    overflow-y: auto;
   }
 
   .message__wrapper {
@@ -29,6 +29,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    display: block;
 
     // @media (max-height: 1000px) {
     //   height: 600px;
@@ -45,6 +46,7 @@
 
 
     .message__success--show {
+      display: block;
       transform: scale(1) translate(-50%, -50%);
     }
 
@@ -67,14 +69,14 @@
         flex-direction: column;
         margin-bottom: 3.7vh;
         letter-spacing: 0.04em;
+        position: relative;
 
         // @include mobile {
         //   margin-bottom: 20px;
         // }
       }
 
-      input,
-      textarea {
+      .form__field {
         @include field-reset;
         margin-top: 1.7vh;
         box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
@@ -94,6 +96,12 @@
           letter-spacing: 0.04em;
           color: $color-main;
           opacity: 0.2;
+        }
+
+        &--invalid {
+          outline: none;
+          box-shadow: 0 0 0 1px $color-error;
+          border: 1px solid $color-error;
         }
       }
 
@@ -128,12 +136,17 @@
     }
   }
 
+  .message__wrapper--fade {
+    display: none;
+  }
+
   .message__success {
     @include transition(transform);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: scale(0) translate(-50%, -50%);
+    display: none;
+    transform: scale(1) translate(-50%, -50%);
     padding: 3.44vh 3vh;
     background-color: $color-white;
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
@@ -143,10 +156,6 @@
       font-size: 18px;
       line-height: 30px;
       margin: 0;
-    }
-
-    .message__success--show {
-      transform: scale(1) translate(-50%, -50%);
     }
 
     button {
@@ -180,4 +189,25 @@
     }
 
   }
+
+  .message__success--show {
+    display: block;
+  }
 }
+
+.message--show {
+  display: block;
+}
+
+.form__stick {
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  color: $color-error;
+  font-size: 12px;
+  line-height: 18px;
+  display: none;
+}
+
+
+
