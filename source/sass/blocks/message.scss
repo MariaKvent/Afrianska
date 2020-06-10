@@ -31,14 +31,6 @@
     justify-content: space-between;
     display: block;
 
-    // @media (max-height: 1000px) {
-    //   height: 600px;
-    // }
-
-    // // @media (max-height: 809px) {
-    // //   height: 80vh;
-    // // }
-
     @include mobile {
       width: 70vw;
       padding: 3vh;
@@ -70,10 +62,6 @@
         margin-bottom: 3.7vh;
         letter-spacing: 0.04em;
         position: relative;
-
-        // @include mobile {
-        //   margin-bottom: 20px;
-        // }
       }
 
       .form__field {
@@ -86,10 +74,6 @@
         border-radius: 10px;
         padding: 2.5vh 4.2vh;
         resize: none;
-
-        // @include mobile {
-        //   padding: 15px 30px;
-        // }
 
         &::placeholder {
           font-weight: 300;
@@ -108,10 +92,6 @@
       textarea {
         height: 14.4vh;
         resize: none;
-
-        // @include mobile {
-        //   height: 100px;
-        // }
       }
 
       button {
@@ -187,11 +167,14 @@
         transform: translateY(-50%) rotate(-45deg);
       }
     }
-
   }
 
   .message__success--show {
     display: block;
+
+    .message__success--close {
+      display: block;
+    }
   }
 }
 

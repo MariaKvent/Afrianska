@@ -128,16 +128,22 @@ function sendAjaxForm(messageForm) {
       var result = $.parseJSON(response);
       var inputEmail = document.getElementById('email');
 
-      if (result.res == 'success') {
+      function emailValid () {
+        inputEmail.classList.remove('form__field--invalid');
+        emailStick.style.display = 'none';
+      }
+
+      function emailNonvalid () {
+        inputEmail.classList.add('form__field--invalid');
+        emailStick.style.display = 'block';
+      }
+
+      if (result.res === 'success') {
         if (inputEmail.value.includes('@') && inputEmail.value.includes('.')) {
-          inputEmail.classList.remove('form__field--invalid');
-          emailStick.style.display = 'none';
+          emailValid();
         } else {
-          inputEmail.classList.add('form__field--invalid');
-          emailStick.style.display = 'block';
+          emailNonvalid();
         }
-
-
         var inputsInvalid = modalWindow.querySelectorAll('.form__field--invalid');
 
         if (inputsInvalid.length === 0) {
@@ -156,11 +162,9 @@ function sendAjaxForm(messageForm) {
         }
 
         if (!(inputEmail.value.includes('@') && inputEmail.value.includes('.'))) {
-          inputEmail.classList.add('form__field--invalid');
-          emailStick.style.display = 'block';
+          emailNonvalid();
         } else {
-          inputEmail.classList.remove('form__field--invalid');
-          emailStick.style.display = 'none';
+          emailValid();
         }
       }
     }
